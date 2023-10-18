@@ -21,6 +21,11 @@
         #yellow-circle{
             background-color: yellow;
         }
+        .NameChanger{
+            display: flex;
+            justify-self: start;
+            align-self: center;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +37,12 @@
 
     <div class ="circle" id="yellow-circle"></div>
 
+
+    <div class="NameChanger">
+        <input type="text" id="textInput">
+        <button id="textchanger">Change Name</button>
+        <p id="text-para">This is some Text</p>
+    </div>
 
 
     <script type="text/javascript">
@@ -46,6 +57,20 @@
 
         document.getElementById("blue-circle").onclick = function() {
             document.getElementById("blue-circle").style.display="none";
+        }
+
+
+
+        document.getElementById("textchanger").onclick=function(){
+            alert("Now we will change the Name to");
+
+            var textEntered ="";
+
+            textEntered = document.getElementById("textInput").value;
+
+            alert(textEntered);
+
+            document.getElementById("text-para").innerHTML = textEntered;
         }
     </script>
 </body>
